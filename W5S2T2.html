@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Position Tasks</title>
+
+<style>
+
+body{
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+/* Common */
+.box{
+    width: 120px;
+    height: 80px;
+    background-color: lightblue;
+    border: 1px solid black;
+    margin: 10px;
+    text-align: center;
+    line-height: 80px;
+}
+
+/* ----------------------
+   Task 1 & 2 - Static
+-----------------------*/
+
+.static-box{
+    position: static;
+}
+
+.header,
+.main,
+.footer{
+    position: static;
+    padding: 15px;
+    margin: 5px;
+    color: white;
+}
+
+.header{background: blue;}
+.main{background: green;}
+.footer{background: red;}
+
+/* ----------------------
+   Task 3 - Relative
+-----------------------*/
+
+.relative-box{
+    position: relative;
+    left: 50px;
+    top: 30px;
+    background: orange;
+}
+
+/* ----------------------
+   Task 4
+-----------------------*/
+
+.rel-container{
+    height: 200px;
+}
+
+.rel-box2{
+    position: relative;
+    left: 100px;
+    top: 50px;
+    background: pink;
+}
+
+/* ----------------------
+   Task 5
+-----------------------*/
+
+.profile-card{
+    width: 250px;
+    border: 1px solid black;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.profile-img{
+    width: 80px;
+    height: 80px;
+    background: gray;
+    border-radius: 50%;
+    margin: auto;
+    position: relative;
+    top: -20px;
+}
+
+/* ----------------------
+   Task 6
+-----------------------*/
+
+.navbar{
+    background: black;
+    color: white;
+    padding: 15px;
+}
+
+.logo{
+    position: relative;
+    left: 20px;
+}
+
+/* ----------------------
+   Task 7
+-----------------------*/
+
+.container{
+    position: relative;
+    width: 300px;
+    height: 200px;
+    border: 2px solid black;
+}
+
+.absolute-box{
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    width: 100px;
+    height: 80px;
+    background: lightgreen;
+}
+
+/* ----------------------
+   Task 8
+-----------------------*/
+
+.cart{
+    position: relative;
+    display: inline-block;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+.badge{
+    position: absolute;
+    top: -10px;
+    right: -20px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    padding: 5px 10px;
+}
+
+/* ----------------------
+   Task 9
+-----------------------*/
+
+.id-card{
+    position: relative;
+    width: 300px;
+    border: 1px solid black;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.id-pic{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 60px;
+    height: 60px;
+    background: gray;
+}
+
+/* ----------------------
+   Task 10
+-----------------------*/
+
+.gallery{
+    position: relative;
+    width: 300px;
+    margin-top: 20px;
+}
+
+.gallery img{
+    width: 100%;
+}
+
+.label{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: yellow;
+    padding: 5px;
+}
+
+/* ----------------------
+   Task 11
+-----------------------*/
+
+.product-card{
+    position: relative;
+    width: 250px;
+    border: 1px solid black;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.discount{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: red;
+    color: white;
+    padding: 5px;
+}
+
+/* ----------------------
+   Task 12
+-----------------------*/
+
+.login-box{
+    position: relative;
+    width: 300px;
+}
+
+.login-box input{
+    width: 100%;
+    padding: 10px;
+}
+
+.icon{
+    position: absolute;
+    right: 10px;
+    top: 12px;
+}
+
+/* ----------------------
+   Task 13
+-----------------------*/
+
+.contact-btn{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: blue;
+    color: white;
+    padding: 10px;
+}
+
+/* ----------------------
+   Task 14
+-----------------------*/
+
+.fixed-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: darkblue;
+    color: white;
+    padding: 10px;
+    z-index: 1000;
+}
+
+/* ----------------------
+   Task 15
+-----------------------*/
+
+.whatsapp{
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: green;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+}
+
+/* ----------------------
+   Task 16
+-----------------------*/
+
+.top-btn{
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background: orange;
+    padding: 10px;
+}
+
+/* ----------------------
+   Task 17
+-----------------------*/
+
+.sticky-nav{
+    position: sticky;
+    top: 0;
+    background: purple;
+    color: white;
+    padding: 15px;
+}
+
+/* ----------------------
+   Task 18
+-----------------------*/
+
+.section-title{
+    position: sticky;
+    top: 0;
+    background: yellow;
+    padding: 10px;
+}
+
+/* ----------------------
+   Task 19
+-----------------------*/
+
+.table-container{
+    height: 250px;
+    overflow-y: auto;
+    border: 1px solid black;
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,td{
+    border: 1px solid black;
+    padding: 10px;
+}
+
+th{
+    position: sticky;
+    top: 0;
+    background: lightgray;
+}
+
+.spacer{
+    height: 600px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="fixed-header">Task 14 - Fixed Header</div>
+
+<br><br><br>
+
+<h2>Task 1 - Static Boxes</h2>
+
+<div class="box static-box">1</div>
+<div class="box static-box">2</div>
+<div class="box static-box">3</div>
+
+<hr>
+
+<h2>Task 2 - Static Layout</h2>
+
+<div class="header">Header</div>
+<div class="main">Main Content</div>
+<div class="footer">Footer</div>
+
+<hr>
+
+<h2>Task 3 - Relative Box</h2>
+
+<div class="box relative-box">Relative</div>
+
+<hr>
+
+<h2>Task 4 - Relative Second Box</h2>
+
+<div class="rel-container">
+    <div class="box">Box 1</div>
+    <div class="box rel-box2">Box 2</div>
+</div>
+
+<hr>
+
+<h2>Task 5 - Profile Card</h2>
+
+<div class="profile-card">
+    <div class="profile-img"></div>
+    <h3>Sagar</h3>
+</div>
+
+<hr>
+
+<h2>Task 6 - Navbar</h2>
+
+<div class="navbar">
+    <span class="logo">LOGO</span>
+</div>
+
+<hr>
+
+<h2>Task 7 - Absolute Box</h2>
+
+<div class="container">
+    <div class="absolute-box"></div>
+</div>
+
+<hr>
+
+<h2>Task 8 - Notification Badge</h2>
+
+<div class="cart">
+    Cart
+    <span class="badge">5</span>
+</div>
+
+<hr>
+
+<h2>Task 9 - Student ID Card</h2>
+
+<div class="id-card">
+    <div class="id-pic"></div>
+    <h3>Sagar</h3>
+    <p>Student</p>
+</div>
+
+<hr>
+
+<h2>Task 10 - Image Label</h2>
+
+<div class="gallery">
+    <img src="https://via.placeholder.com/300x200">
+    <span class="label">NEW</span>
+</div>
+
+<hr>
+
+<h2>Task 11 - Product Card</h2>
+
+<div class="product-card">
+    <span class="discount">20% OFF</span>
+    Product Name
+</div>
+
+<hr>
+
+<h2>Task 12 - Login Icon</h2>
+
+<div class="login-box">
+    <input type="password" placeholder="Password">
+    <span class="icon">🔒</span>
+</div>
+
+<hr>
+
+<div class="sticky-nav">
+    Task 17 - Sticky Navigation Bar
+</div>
+
+<h2>Task 18 - Sticky Section Titles</h2>
+
+<div class="section-title">Section 1</div>
+<p class="spacer"></p>
+
+<div class="section-title">Section 2</div>
+<p class="spacer"></p>
+
+<div class="section-title">Section 3</div>
+<p class="spacer"></p>
+
+<hr>
+
+<h2>Task 19 - Sticky Table Header</h2>
+
+<div class="table-container">
+
+<table>
+<tr>
+<th>ID</th>
+<th>Name</th>
+</tr>
+
+<tr><td>1</td><td>Student 1</td></tr>
+<tr><td>2</td><td>Student 2</td></tr>
+<tr><td>3</td><td>Student 3</td></tr>
+<tr><td>4</td><td>Student 4</td></tr>
+<tr><td>5</td><td>Student 5</td></tr>
+<tr><td>6</td><td>Student 6</td></tr>
+<tr><td>7</td><td>Student 7</td></tr>
+<tr><td>8</td><td>Student 8</td></tr>
+<tr><td>9</td><td>Student 9</td></tr>
+<tr><td>10</td><td>Student 10</td></tr>
+<tr><td>11</td><td>Student 11</td></tr>
+<tr><td>12</td><td>Student 12</td></tr>
+<tr><td>13</td><td>Student 13</td></tr>
+<tr><td>14</td><td>Student 14</td></tr>
+<tr><td>15</td><td>Student 15</td></tr>
+
+</table>
+
+</div>
+
+<!-- Task 13 -->
+<button class="contact-btn">Contact Us</button>
+
+<!-- Task 15 -->
+<div class="whatsapp">💬</div>
+
+<!-- Task 16 -->
+<button class="top-btn">↑ Top</button>
+
+</body>
+</html>
